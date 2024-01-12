@@ -1,0 +1,32 @@
+<!-- employees_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Date of Joining</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in employees %}
+                <tr>
+                    <td>{{ emp.name }}</td>
+                    <td>{{ emp.designation }}</td>
+                    <td>{{ emp.department }}</td>
+                    <td>{{ emp.date_of_joining }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- emapp/templates/emapp/add_employee.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+<body><style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+   .absent {
+            background-color: #ff6347;
+            color: white;
+        }
+.present {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+<center>
+    <h2>Add Employee</h2>
+    <form method="post" action="{% url 'add_employee' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+  <button onclick="window.location.href='{% url 'index' %}'">Back to Employee List</button>
+
+    </center>
+
+</body>
+</html>
