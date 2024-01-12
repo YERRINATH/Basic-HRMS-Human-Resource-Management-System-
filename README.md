@@ -24,6 +24,7 @@ The project is structured with Django, and it includes the following components:
         │   ├── models.py
         │   ├── tests.py
         │   └── views.py
+        |   |__ urls.py
         ├── empro/
         │   ├── __init__.py
         │   ├── asgi.py
